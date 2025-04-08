@@ -32,11 +32,14 @@
     document.getElementById("myForm").addEventListener("submit", function (event) {
       const inputs = this.querySelectorAll('input[type="text"]');
       for (let input of inputs) {
-        if (input.hasAttribute('required') && input.value.trim() === "") {
+        if (input.value.trim() === "") {
           alert("Please fill all required fields.");
           input.focus();
-          event.preventDefault(); // stop the form from submitting
+          event.preventDefault(); 
           return;
+        }
+        else{
+            alert("Data is submitted");
         }
       }
     });
